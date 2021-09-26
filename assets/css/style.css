@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  border: none;
+  padding: 16px 24px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.title {
+  margin-bottom: 48px;
+}
+
+/* CSS Animation Fundamentals */
+.animation-fundamentals {
+  padding: 64px;
+}
+
+.transition-properties {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.transition-properties > .btn:not(:first-child) {
+  transition-duration: 1.5s;
+  background-color: hsl(300, 68%, 42%);
+  color: #fff;
+}
+
+.transition-properties > .btn:not(:first-child):hover {
+  transform: translateX(500px);
+}
+
+.btn-transition {
+  color: #fff;
+  background-color: hsl(240, 73%, 55%);
+  transition: 0.5s ease-in-out;
+}
+
+.btn-transition:hover {
+  background-color: hsl(120, 60%, 36%);
+}
+
+/* 
+  ease: the starts slow the go faster the finishes slow
+  linear: the change occurs at the same rate
+  ease in: the change starts slow then go faster before the end
+  ease-out: the change starts fast the slows down before the end
+  ease-in-out: the change starts slow then go faster then finishes slow
+  
+  P.S. There is transition delay which will wait and after that the transition property will be activated
+  */
+
+.btn-ease {
+  transition-timing-function: ease;
+}
+
+.btn-linear {
+  transition-timing-function: linear;
+}
+
+.btn-ease-in {
+  transition-timing-function: ease-in;
+}
+
+.btn-ease-out {
+  transition-timing-function: ease-out;
+}
+
+.btn-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
