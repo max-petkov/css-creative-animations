@@ -35,7 +35,7 @@ body {
 
 .transition-properties > .btn:not(:first-child) {
   transition-duration: 1.5s;
-  background-color: hsl(300, 68%, 42%);
+  background-color: hsl(240, 66%, 63%);
   color: #fff;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .btn-transition {
   color: #fff;
-  background-color: hsl(240, 73%, 55%);
+  background-color: hsl(240, 66%, 63%);
   transition: 0.5s ease-in-out;
 }
 
@@ -81,4 +81,149 @@ body {
 
 .btn-ease-in-out {
   transition-timing-function: ease-in-out;
+}
+
+/* Transform fundamentals */
+.transform-fundamentals {
+  padding: 64px;
+}
+
+.transform-properties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.transform-properties > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  background-color: rgb(189, 116, 152);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.transform-scale:hover {
+  transform: scale(1.2);
+}
+
+.transform-translate:hover {
+  transform: translateY(-100px);
+}
+
+.transform-rotate:hover {
+  transform: rotate(180deg);
+}
+
+.transform-skew:hover {
+  transform: skew(-24deg, -8deg);
+}
+
+/* Transform Origin */
+
+.transform-fundamentals-origin {
+  padding: 64px;
+}
+
+/* 
+It can be used custom transform-origin: 80% 30%;
+*/
+
+.transform-origin-top {
+  transform-origin: top;
+}
+
+.transform-origin-top:hover {
+  transform: rotate(45deg);
+}
+
+.transform-origin-bottom {
+  transform-origin: bottom;
+}
+
+.transform-origin-bottom:hover {
+  transform: rotate(45deg);
+}
+
+.transform-origin-left {
+  transform-origin: left;
+}
+
+.transform-origin-left:hover {
+  transform: rotate(45deg);
+}
+
+.transform-origin-right {
+  transform-origin: right;
+}
+
+.transform-origin-right:hover {
+  transform: rotate(45deg);
+}
+
+.transform-origin-top-right {
+  transform-origin: top right;
+}
+
+.transform-origin-top-right:hover {
+  transform: rotate(45deg);
+}
+
+.transform-origin-top-left {
+  transform-origin: top left;
+}
+
+.transform-origin-top-left:hover {
+  transform: rotate(45deg);
+}
+
+.transform-origin-bottom-left {
+  transform-origin: bottom left;
+}
+
+.transform-origin-bottom-left:hover {
+  transform: rotate(45deg);
+}
+
+.transform-origin-bottom-right {
+  transform-origin: bottom right;
+}
+
+.transform-origin-bottom-right:hover {
+  transform: rotate(45deg);
+}
+
+/* 3D rotate */
+.transform-3d-rotate {
+  padding: 64px;
+}
+
+.transform-3d-x {
+  perspective: 300px;
+}
+
+.transform-3d-x:hover {
+  transform: rotateX(60deg);
+}
+
+.transform-3d-y {
+  perspective: 500px;
+}
+
+.transform-3d-y:hover {
+  transform: rotateY(60deg);
+}
+
+.transform-3d-z {
+  perspective: 500px;
+}
+
+.transform-3d-z:hover {
+  transform: rotateZ(60deg);
 }
