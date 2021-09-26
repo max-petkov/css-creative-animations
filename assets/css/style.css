@@ -205,7 +205,7 @@ It can be used custom transform-origin: 80% 30%;
 }
 
 .transform-3d-x {
-  perspective: 300px;
+  perspective: 1000px;
 }
 
 .transform-3d-x:hover {
@@ -226,4 +226,143 @@ It can be used custom transform-origin: 80% 30%;
 
 .transform-3d-z:hover {
   transform: rotateZ(60deg);
+}
+
+/* Button Animations */
+.btn-animations {
+  padding: 64px;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.btn-animation--1 {
+  position: relative;
+  border: 1px solid hsl(0, 0%, 15%);
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.btn-animation--1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  transition: 1s;
+}
+
+.btn-animation--1:hover::before {
+  transform: rotate(0);
+}
+
+.btn-animation--2 {
+  background-color: transparent;
+  border: 1px solid #000;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-animation--2:hover {
+  color: #fff;
+}
+
+.btn-animation--2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: tomato;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 1s;
+}
+
+.btn-animation--2:hover::before {
+  width: 100%;
+}
+
+.btn-animation--3 {
+  background-color: transparent;
+  border: 1px solid #000;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.btn-animation--3:hover {
+  color: #fff;
+}
+
+.btn-animation--3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: tomato;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  z-index: -1;
+  transition: 1s;
+}
+
+.btn-animation--3:hover::before {
+  transform: translateY(0);
+}
+
+.btn-animation--4 {
+  position: relative;
+  border: 1px solid hsl(258, 67%, 52%);
+  background-color: transparent;
+  transition: 1s;
+  color: hsl(258, 67%, 52%);
+}
+
+.btn-animation--4:hover {
+  color: #fff;
+}
+
+.btn-animation--4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(258, 67%, 52%);
+  transition: 1s;
+  transform: rotateX(90deg);
+  z-index: -1;
+}
+
+.btn-animation--4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(258, 67%, 52%);
+  transition: 1s;
+  transform: rotateY(90deg);
+  z-index: -1;
+}
+
+.btn-animation--4:hover::before {
+  transform: rotateX(0);
+}
+
+.btn-animation--4:hover::after {
+  transform: rotateY(0);
 }
