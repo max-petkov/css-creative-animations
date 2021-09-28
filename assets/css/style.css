@@ -366,3 +366,116 @@ It can be used custom transform-origin: 80% 30%;
 .btn-animation--4:hover::after {
   transform: rotateY(0);
 }
+
+.btn-animation--5 {
+  background-color: transparent;
+  border: 1px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animation--5::before {
+  content: "YEAH !";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: 0.5s;
+}
+
+.btn-animation--5:hover::before {
+  transform: translateY(0);
+}
+
+.btn-animation--6 {
+  position: relative;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  transition: 1s;
+  overflow: hidden;
+}
+.btn-animation--6:hover {
+  background-color: #ca5743;
+}
+
+.btn-animation--6::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.219);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  transform: translate(-100%, 50%) rotate(45deg);
+  transition: 1s;
+}
+
+.btn-animation--6:hover::before {
+  transform: translate(100%, 50%) rotate(45deg);
+}
+
+.btn-animation--7 {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  border: 1px solid #000;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.btn-animation--7::before {
+  content: "Hover me...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #000;
+  background-color: hsl(60, 81%, 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-100%, 100%);
+  transition: 1s;
+}
+
+.btn-animation--7:hover::before {
+  transform: translate(0, 0);
+}
+
+.btn-animation--8 {
+  border: 1px solid black;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animation--8::before {
+  content: "Hover me...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.btn-animation--8:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
